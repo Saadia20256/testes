@@ -1,21 +1,21 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-int main () {
-   int n , i ;
-   printf("entrer un nombre entier positif : ");
-   scanf("%d",&n);
-   if(n<0) {
-    printf("erur : la factorielle n'est pas definie pour les nombres negatifs .\n");
+int main() {
+    int n, i;
+    long long factorielle = 1;
 
-   }else {
-       for (i =1 ; i<=10 ;i++){
-          factorielle*= i;
-         {
+    printf("Entrer un nombre entier positif : ");
+    scanf("%d", &n);
 
-        printf("%d! = %llu",n,factorielle);
-          }
-       }
+    if (n < 0) {
+        printf("Erreur : la factorielle n'est pas définie pour les nombres négatifs.\n");
+    } else {
+        for (i = 1; i <= n; i++) {
+            factorielle *= i;
+        }
+        printf("%d! = %lld\n", n, factorielle);
+    }
 
-       return 0 ;
-   }
+    return 0;
+}
